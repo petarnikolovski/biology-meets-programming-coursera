@@ -142,8 +142,26 @@ Dna5 = "CAATAATATTCG"
 
 Dna = [Dna1, Dna2, Dna3, Dna4, Dna5]
 
-#print GreedyMotifSearch(Dna, 3, 5)
+# Protein translator
+def ProteinTranslator(RNA):
+    GeneticCode = {
+        'H' : ['CAU', 'CAC'],
+        'Q' : ['CAA', 'CAG'],
+        'P' : ['CCU', 'CCC', 'CCA', 'CCG'],
+        'R' : ['CGU', 'CGC', 'CGA', 'CGG'],
+        'L' : ['CUU', 'CUC', 'CUA', 'CUG'],
+        'D' : [],
+        'E' : [],
+        'A' : [],
+        'G' : [],
+        'V' : [],
 
+    }
+
+
+
+#print GreedyMotifSearch(Dna, 3, 5)
+"""
 #  dormancy survival regulator
 DosR = open("DosR.txt", "r")
 DosR_DNAs = DosR.read().splitlines()
@@ -155,3 +173,20 @@ score_motif = Score(best_motifs)
 print best_motifs
 print
 print score_motif
+"""
+print "--- QUIZ WEEK 3 ---"
+print "Question 5"
+prof = {
+    'A': [0.4, 0.3, 0.0, 0.1, 0.0, 0.9],
+    'C': [0.2, 0.3, 0.0, 0.4, 0.0, 0.1],
+    'G': [0.1, 0.3, 1.0, 0.1, 0.5, 0.0],
+    'T': [0.3, 0.1, 0.0, 0.4, 0.5, 0.0],
+}
+
+print Pr("AAGTTC", prof)
+print
+
+print Pr("GAGCTA", prof)
+print
+
+print "--- QUIZ WEEK 3 ---"
